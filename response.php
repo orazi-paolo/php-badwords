@@ -12,11 +12,21 @@
     // prendo i dati dall'url
     // per il paragrafo
         $userParagraph = $_GET["userParagraph"];
+        // calcolo la lunghezza del paragrafo
+        $paragraphLength = strlen($userParagraph);
     // per la parola da censurare
         $userBadWords = $_GET["userBadWords"];
     // sostituisco la parola da censurare con ***
         $censoredParagraph = str_replace($userBadWords, "***", $userParagraph);
+        $censoredParagraphLength = strlen($censoredParagraph);
     ?>
-    
+    <section class="container mt-5">
+        <h2>Paragraph with length</h2>
+        <!-- stampo in pagina il paragrafo con la sua lunghezza -->
+        <p><?php echo $userParagraph . ". Its length is " . $paragraphLength . " characters"?></p>
+        <!-- stampo in pagina il paragrafo con la parola censurata e la sua lunghezza -->
+        <h2>Paragraph with length and with bad word censored</h2>
+        <p><?php echo $censoredParagraph . ". Its length is " . $censoredParagraphLength; ?></p>
+    </section>
 </body>
 </html>
