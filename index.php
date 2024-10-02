@@ -12,12 +12,14 @@
         <form action="./response.php" method="GET" >
             <div class="mb-3">
                 <label for="userParagraph" class="form-label">Paragraph</label>
-                <input type="text" class="form-control" id="userParagraph" placeholder="Insert paragraph">
+                <input type="text" class="form-control" id="userParagraph" name="userParagraph" placeholder="Insert paragraph">
             </div>
             <div class="mb-3">
                 <label for="userBadWords" class="form-label">Bad word</label>
-                <input type="text" class="form-control" id="userBadWords" placeholder="Insert the bad word"></input>
+                <input type="text" class="form-control" id="userBadWords" name="userBadWords" placeholder="Insert the bad word"></input>
             </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+            <button type="reset" class="btn btn-warning">Reset</button>
         </form>
     </section>
 </body>
